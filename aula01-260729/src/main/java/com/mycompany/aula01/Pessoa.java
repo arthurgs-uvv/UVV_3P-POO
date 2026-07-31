@@ -20,6 +20,7 @@ public class Pessoa {
         this.idade = idade;
         this.altura = altura;
         this.peso = peso;
+        this.telefone = telefone;
     }
     
 }
