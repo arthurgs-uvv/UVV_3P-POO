@@ -35,4 +35,5 @@ Característica de uma classe = Variável (Atributo)
 Classe determina o que é comum dentro de um grupo de objetos
 
 ALT + SHIFT + F     -> Organiza o código em tablatura
+Refactor -> Rename  -> Renomear a classe
 */
