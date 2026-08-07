@@ -9,7 +9,7 @@ package com.mycompany.aula02;
  * @author alunolab11
  */
 public class Conta {
-    int agencia, numero;
+    private int agencia, numero;
     private double saldo;
     
     Conta(){
@@ -48,15 +48,31 @@ public class Conta {
     }
     
     void creditar(double valor){
-        this.saldo += valor;
+        saldo += valor;
     }
     
-    void debitar(double valor){
-        this.saldo -= valor;
+    boolean debitar(double valor){
+        if (saldo >= valor){
+            saldo -= valor;
+            return true;
+        } else{
+            System.out.println("Error! Saldo insuficiente.");
+            return false;
+        }
     }
     
     void transferir(Conta conta,  double valor){
-        debitar(valor);
-        conta.creditar(valor);
+        if(debitar(valor)){
+            conta.creditar(valor);
+        } else{
+            System.out.println("Transferência Negada!");
+        }
+    }
+    
+    void printarDados(String conta){
+        System.out.println("Usuario " + conta);
+        System.out.println("Agencia: " + getAgencia());
+        System.out.println("Numero: " + getNumero());
+        System.out.println("Saldo: R$" + getSaldo() + '\n');
     }
 }
