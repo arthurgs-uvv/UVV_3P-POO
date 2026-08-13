@@ -48,15 +48,23 @@ public class Conta {
     }
     
     void creditar(double valor){
-        saldo += valor;
+        if(valor > 0)
+            saldo += valor;
+        else
+            System.out.println("Error! Valor inválido.");
     }
     
     boolean debitar(double valor){
-        if (saldo >= valor){
-            saldo -= valor;
-            return true;
-        } else{
-            System.out.println("Error! Saldo insuficiente.");
+        if(valor > 0){    
+            if (saldo >= valor){
+                saldo -= valor;
+                return true;
+            } else{
+                System.out.println("Error! Saldo insuficiente.");
+                return false;
+            }
+        }else{
+            System.out.println("Error! Valor inválido");
             return false;
         }
     }
@@ -76,3 +84,4 @@ public class Conta {
         System.out.println("Saldo: R$" + getSaldo() + '\n');
     }
 }
+

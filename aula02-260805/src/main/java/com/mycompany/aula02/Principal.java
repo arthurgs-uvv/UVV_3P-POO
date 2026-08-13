@@ -52,4 +52,6 @@ public class Principal {
     tiver o mesmo nome da variavel global da Classe;
 - 'SOUT' -> System out abreviado;
 - Utilizar sempre a variavel local no teste do if;
+- Alt + insert -> Atalho para criar get e set;
+- Dontpad -> Compartilhar codigos
 */
