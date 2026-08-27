@@ -20,11 +20,11 @@ public class ContaCorrente extends Conta{
         this.limite = limite;
     }    
         
-    void setLimite (double valor){
+    void setLimite(double valor){
         limite = valor;
     }
     
-    double getLimite (){
+    double getLimite(){
         return limite;
     }
     
@@ -53,5 +53,11 @@ public class ContaCorrente extends Conta{
         } else{
             System.out.println("Transferência Negada!");
         }
+    }
+    
+    @Override
+    public String toString(){
+        return "|Conta|\nNumero da Agencia: " + getAgencia() + "\nNumero da Conta: " + 
+                getNumero() + "\nSaldo: " + getSaldo() + "\n" + "Limite: " + getLimite() + "\n"; 
     }
 }

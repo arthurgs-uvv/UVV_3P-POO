@@ -34,12 +34,13 @@ public class Principal {
         System.out.println(c2.toString());
         */
         
-        Conta c1 = new ContaCorrente(222, 333, 1000.00, 200);
+        ContaCorrente c1 = new ContaCorrente(222, 333, 1000.00, 200);
         
-        c1.debitar(1100.00);
-        
-        System.out.println(c1.getLimite());
-        System.out.println(c1.getSaldo());
+        System.out.println(c1.toString());
+        c1.creditar(200);
+        System.out.println(c1.toString());
+        c1.setLimite(800.00);
+        System.out.println(c1.toString());
         
     }
 }
