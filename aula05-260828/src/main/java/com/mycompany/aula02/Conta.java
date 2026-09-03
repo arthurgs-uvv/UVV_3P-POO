@@ -7,7 +7,11 @@ package com.mycompany.aula02;
 /**
  *
  * @author alunolab11
+ * UML DO EXERCICIO DO PORTAL
  */
+
+
+
 public class Conta {
     private int agencia, numero;
     private double saldo;
@@ -24,27 +28,11 @@ public class Conta {
     Conta(int agencia, int numero, double saldo){
         this.agencia = agencia;
         this.numero = numero;
-        this.saldo = saldo;
+        this.saldo = Math.max(0.0, saldo);
     }
     
-    public double getSaldo(){
+    public double obterSaldo(){
         return saldo;
-    }
-    
-    public void setAgencia(int agencia){
-        this.agencia = agencia;
-    }
-    
-    public int getAgencia(){
-        return agencia;
-    }
-    
-    public void setNumero(int numero){
-        this.numero = numero;
-    }
-    
-    public int getNumero(){
-        return numero;
     }
     
     public void creditar(double valor){
@@ -74,8 +62,8 @@ public class Conta {
     
     @Override // Override serve para sobrescrever um método de java.
     public String toString(){
-        return "|Conta|\nNumero da Agencia: " + getAgencia() + "\nNumero da Conta: " + 
-                getNumero() + "\nSaldo: " + getSaldo() + "\n"; 
+        return "|Conta|\nNumero da Agencia: " + agencia + "\nNumero da Conta: " + 
+                numero + "\nSaldo: " + obterSaldo() + "\n"; 
     }
 }
 

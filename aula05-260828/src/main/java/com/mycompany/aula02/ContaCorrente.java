@@ -7,6 +7,7 @@ package com.mycompany.aula02;
 /**
  *
  * @author alunolab11
+ * UML DO EXERCICIO DO PORTAL
  */
 public class ContaCorrente extends Conta{
     private double limite;
@@ -27,23 +28,14 @@ public class ContaCorrente extends Conta{
             if(diferenca > 0){
                 creditar(diferenca);
             }else if(diferenca < 0){
-                debitar(diferenca);
+                debitar(diferenca*-1);
             }
             this.limite = limite;
         }
     }
     
-    public double getLimite(){
-        return limite;
-    }
-    
-    public double getSaldoReal(){
-        return getSaldo() - limite;
-    }
-    
     @Override
     public String toString(){
-        return "|Conta|\nNumero da Agencia: " + getAgencia() + "\nNumero da Conta: " + 
-                getNumero() + "\nSaldo: " + getSaldo() + "\n" + "Limite: " + getLimite() + "\n"; 
+        return super.toString() + "\n" + "Limite: " + limite + "\n"; 
     }
 }
