@@ -12,7 +12,7 @@ public class Leao extends Animal implements Andar{
     private String alcunha; //Título do animal (Rei da Savana)
     
     public Leao(String alcunha, String nome, double peso, String habitat){
-        super(nome, peso, habitat)
+        super(nome, peso, habitat);
         this.alcunha = alcunha;
     }
 

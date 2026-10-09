@@ -21,32 +21,32 @@ public class Sapo extends Animal implements Nadar, Andar{
     }
 
     @Override
-    public nadar(String local){
+    public void nadar(String local){
         System.out.println("O sapo nada com as patas traseiras no " + local);
     }
 
     @Override
-    public mergulhar(int profundidade){
+    public void mergulhar(int profundidade){
         System.out.println("O sapo mergulha para se esconder a " + profundidade + "metros");
     }
 
     @Override
-    public emergir(){
+    public void emergir(){
         System.out.println("O sapo emerge e salta para uma pedra próxima");
     }
 
     @Override
-    public andar(int velocidade){
+    public void andar(int velocidade){
         System.out.println("O sapo salta lentamenta pela floresta a " + velocidade + "km/h");
     }
 
     @Override
-    public correr(int velocidade){
+    public void correr(int velocidade){
         System.out.println("O sapo usa o veneno e foge saltando rapidamente a " + velocidade + "km/h");
     }
 
     @Override
-    public parar(){
+    public void parar(){
         System.out.println("O sapo para imóvel e se camufla entre as folhas");
     }
 }
